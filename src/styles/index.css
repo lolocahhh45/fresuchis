@@ -1,0 +1,18 @@
+:root {
+    
+    --theme-color-1: black;
+    --theme-color-2: white;
+
+    --font-size-1: clamp(1rem, 5vw, 2rem);
+
+
+    --text-color-1: white;
+    --text-color-2: black;
+}
+
+body {
+    background-color: rgb(228, 0, 125);
+
+    background-image: url("../assets/pageBackground.png");
+    background-size: cover;
+}
