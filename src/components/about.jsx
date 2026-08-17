@@ -9,9 +9,9 @@ function AboutSection() {
                     Que somos?
                 </h1>
 
-                <h2 className="aboutText">
+                <p className="aboutText">
                     En CEA FIT creemos que el bienestar se construye paso a paso. Nuestro método se basa en tres pilares:
-                </h2>
+                </p>
                 <ul className="aboutList">
 
                     <li>

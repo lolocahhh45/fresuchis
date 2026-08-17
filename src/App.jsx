@@ -4,7 +4,7 @@ import './styles/defaultClasses.css'
 import NavBar from './components/navBar.jsx';
 import HeroSection from './components/hero.jsx'
 import AboutSection from './components/about.jsx'
-
+import Services from './components/services.jsx'
 
 function App() {
 
@@ -14,6 +14,7 @@ function App() {
         <NavBar/>
         <HeroSection/>
         <AboutSection/>
+        <Services/>
       </main>
     </>
   )

@@ -14,8 +14,6 @@ function HeroSection() {
                 />
 
                 <div className="heroText">
-                    
-
                     <h1 className="heroTitle">FRESUCHIS</h1>
                     <p className="heroSubtitle">Programa CEAFIT</p>
                     <p className="heroDesc">CEAFIT Sesiones de masajes, entrenamientos individuales tanto como grupales, entrenadora profesional y grandes avances garantizados.</p>
