@@ -3,7 +3,12 @@
     --theme-color-1: black;
     --theme-color-2: white;
 
-    --font-size-1: clamp(1rem, 5vw, 2rem);
+    --font-title-size: clamp(2rem, 10vw, 3.5rem);
+
+    --font-sectionTitle-size: clamp(2rem, 8vw, 3.3rem);
+    --font-desc-size: clamp(1rem, 4vw, 1.4rem);
+    
+    --font-size-1: clamp(1rem, 6vw, 2rem);
 
 
     --text-color-1: white;
@@ -11,8 +16,9 @@
 }
 
 body {
-    background-color: rgb(228, 0, 125);
+    background-color: rgb(255, 0, 140);
 
     background-image: url("../assets/pageBackground.png");
-    background-size: cover;
+    background-size:contain;
+    background-repeat: repeat;
 }

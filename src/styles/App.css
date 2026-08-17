@@ -76,7 +76,7 @@
 }
 
 .heroTitle {
-    font-size: clamp(2rem, 10vw, 3.5rem);
+    font-size: var(--font-title-size);
 
     margin: .5rem 0;
     margin-bottom: 0;
@@ -93,7 +93,7 @@
 }
 
 .heroDesc {
-    font-size: clamp(1rem, 4vw, 1.4rem);
+    font-size: var(--font-desc-size);
 
     margin: 1rem 0;
     line-height: 1.4;
@@ -109,4 +109,39 @@
     font-size: clamp(1rem, 5vw, 1.5rem);
     color: var(--text-color-1);
     text-decoration: none;
+}
+
+/*
+    About
+*/
+
+.aboutTitle, .aboutText {
+    color: var(--text-color-1);
+}
+
+.aboutTitle{
+    font-size: var(--font-sectionTitle-size);
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.aboutText {
+    font-size: var(--font-desc-size);
+}
+
+.innerAbout {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0rem 1rem;
+}
+
+.aboutList {
+    padding: 1rem;
+    color: var(--text-color-1);
+    margin: 0;
+}
+
+.aboutList li {
+    font-size: var(--font-desc-size);
 }

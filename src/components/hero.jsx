@@ -6,7 +6,7 @@ const _id = "heroSection";
 function HeroSection() {
     return (
         <section id={_id} className={_className + " container"}>
-            <div className="heroInner glass">
+            <div className="heroInner glass rounded">
                 <img 
                     src={ceo}
                     alt="Fresuchis Logo" 
