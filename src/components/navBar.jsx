@@ -17,13 +17,22 @@ function NavBar() {
 
                 <li>
                     <a
-                        href="#heroSection"
+                        href="#servicesSection"
                         onClick={(e) => {
                         e.preventDefault(); // evita que cambie la URL
-                        document.getElementById("heroSection").scrollIntoView({ behavior: "smooth" });
-                    }}> Inicio </a>          
+                        document.getElementById("servicesSection").scrollIntoView({ behavior: "smooth" });
+                    }}> Servicios </a>      
                 </li>
-
+                
+                <li>
+                    <a
+                        href="#contactSection"
+                        className="navBarCTA"
+                        onClick={(e) => {
+                        e.preventDefault(); // evita que cambie la URL
+                        document.getElementById("contactSection").scrollIntoView({ behavior: "smooth" });
+                    }}> Redes sociales </a>      
+                </li>
 
             </ul>
         </nav>

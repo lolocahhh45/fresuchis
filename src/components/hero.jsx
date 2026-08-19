@@ -14,10 +14,15 @@ function HeroSection() {
                 />
 
                 <div className="heroText">
-                    <h1 className="heroTitle">FRESUCHIS</h1>
-                    <p className="heroSubtitle">Programa CEAFIT</p>
-                    <p className="heroDesc">CEAFIT Sesiones de masajes, entrenamientos individuales tanto como grupales, entrenadora profesional y grandes avances garantizados.</p>
-                    <a href="#ceafit" className="heroCTA">Conoce CEAFIT</a>
+                    <h1 className="heroTitle textShadow">FRESUCHIS</h1>
+                    <p className="heroSubtitle textShadow">Programa CEAFIT</p>
+                    <p className="heroDesc textShadow">CEAFIT Sesiones de masajes, entrenamientos individuales tanto como grupales, entrenadora profesional y grandes avances garantizados.</p>
+                    <a href="#ceafit" className="heroCTA textShadow"
+                    onClick={(e) => {
+                        e.preventDefault(); // evita que cambie la URL
+                        document.getElementById("contactSection").scrollIntoView({ behavior: "smooth" });
+                    }}>Contactanos</a>
+
                 </div>
                 
             </div>
