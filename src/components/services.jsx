@@ -18,14 +18,14 @@ function Services() {
 
     return (
         <section id={_id} className={" container"}>
-            <div className="innerAbout glass rounded">
+            <div className="innerServices glass rounded">
                 <h1 className="servicesTitle textShadow">
                     Servicios
                 </h1>
 
                 <div className="servicesList">
 
-                    <div>
+                    <div className="servicesGroup">
                         <h2 className="servicesText textShadow">
                             Planes de entrenamiento
                         </h2>
@@ -51,7 +51,7 @@ function Services() {
                     </div>
                     
 
-                    <div>
+                    <div className="servicesGroup">
                         <h2 className="servicesText textShadow">
                             Masajes
                         </h2>
@@ -100,12 +100,12 @@ function Services() {
                         </div>
                     </div>
 
-                    <div>
+                    <div className="servicesGroup">
                         <h2 className="servicesText textShadow">
                             Ofertas especiales y combos
                         </h2>
-
-                        <ServiceMassage 
+                        <div className="servicesCards">
+                            <ServiceMassage 
                                 icon={reductor}
                                 title="Planes Reductores"
                                 description="Presiona para mas informacion!"
@@ -126,6 +126,8 @@ function Services() {
                                 </>
                             )}
                          />
+                        </div>
+                        
                     </div>
                 </div>
             </div>

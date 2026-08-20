@@ -1,5 +1,6 @@
 import './styles/App.css'
 import './styles/defaultClasses.css'
+import './styles/index.css'
 
 import NavBar from './components/navBar.jsx';
 import HeroSection from './components/hero.jsx'

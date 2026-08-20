@@ -13,7 +13,7 @@ function Contact() {
               <span>829-123-1234</span>
             </a>
           </li>
-          <li className="contactItem textShadow">📩 Correo: <a className="contactLink " href="mailto:fresuchis.example@gmail.com" style={{ textDecoration: "none" }}> fresuchis.example@gmail.com</a></li>
+          <li className="contactItem textShadow"><span>📩 Correo:</span> <a className="contactLink " href="mailto:fresuchis.example@gmail.com" style={{ textDecoration: "none" }}> fresuchis.example@gmail.com</a></li>
           <li className="contactItem">
             <a className="contactLink textShadow" href="https://instagram.com/fresuchis" target="_blank" rel="noreferrer" style={{ textDecoration: "none" }}>
               <img src={instagramLogo} alt="Instagram" className="contactImg" />

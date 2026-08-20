@@ -16,7 +16,9 @@
 
     margin: 0;
 
-    padding: 1rem 1rem;
+    padding: 1rem;
+
+    height: clamp(1rem, 2.5vh, 5rem);
 
     list-style: none;
 
@@ -38,7 +40,7 @@
     
     text-decoration: none;
 
-    font-weight: 400;
+    font-weight: 500;
     text-shadow: var(--text-shadow-1);
     color: var(--text-color-1);
 }
@@ -48,7 +50,7 @@
     border: 1px solid white;
     background-color: rgba(255, 255, 255, .2);
 
-    padding: .5rem;
+    padding: .25rem 1rem;
 }
 
 .navLogo {
@@ -79,7 +81,9 @@
     
     background-color: var(--inner-color-1);
 
-    min-height: 85vh;
+    margin-top: 2rem;
+
+    min-height: clamp(5rem, 70vh, 50rem);
 
     gap: 1rem;
 
@@ -87,9 +91,11 @@
     align-items: center;
 }
 
-.heroText {
+.heroContent {
     display: flex;
     flex-direction: column;
+
+    align-items: center;
 
     padding: 2rem;
 }
@@ -122,7 +128,7 @@
 
 .heroCTA {
     margin-top: 1rem;
-    padding: 1.5rem;
+    padding: .5rem 1rem;
     background-color: rgba(255, 255, 255, .2);
     border: 1px solid rgba(255, 255, 255, 1);
     border-radius: 12px;
@@ -130,6 +136,22 @@
     font-size: clamp(.8rem, 5.2vw, 2rem);
     color: var(--text-color-1);
     text-decoration: none;
+
+    max-width: 25rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .heroInner {
+        flex-direction: row;
+
+    }
+
+    .heroContent {
+        align-items: flex-start;
+
+        text-align: left;
+    }
+
 }
 
 /*
@@ -156,7 +178,7 @@
     display: flex;
     flex-direction: column;
 
-    padding: 0rem 1rem;
+    padding: .5rem 2rem;
 
     margin-bottom: 5rem;
 }
@@ -182,10 +204,22 @@
     SERVICES
 */
 
-.servicesTitle, .servicesText {
-     color: var(--text-color-1);
+.innerServices {
+    background-color: var(--inner-color-1);
+    display: flex;
+    flex-direction: column;
 
-     text-align: center;
+    align-items: center;
+
+    padding: 0rem 1rem;
+
+    margin-bottom: 5rem;
+}
+
+.servicesTitle, .servicesText {
+    color: var(--text-color-1);
+
+    text-align: center;
     width: 100%;
 }
 
@@ -208,12 +242,23 @@
     padding-bottom: 1rem;
 
     justify-content: center;
+    align-items: center;
 
+}
+
+.servicesGroup {
+    display: flex;
+    flex-direction: column;
+    
+    width: 100%;
 }
 
 .servicesCards {
     display: flex;
     flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
 
     gap: 1rem;
 }
@@ -268,7 +313,7 @@
     align-items: center;
     justify-content: center;
 
-    width: 35%;
+    width: clamp(4rem, 26vw, 8rem);
 
     border-top-left-radius: 11px;
     border-bottom-left-radius: 11px;
@@ -278,16 +323,16 @@
 .serviceCardRightSide{
     display: flex;
     flex-direction: column;
-    align-items: center;
+  
 
     justify-content: space-evenly;
     padding: .5rem;
     gap: .2rem;
-    width: 65%;
+    width: 100%;
 }
 
 .serviceCardTitle, .serviceCardText, .serviceMassageTitle, .serviceMassageText {
-    text-align: center;
+    text-align: left;
 
     margin: 0;
     padding: 0;
@@ -365,6 +410,39 @@
     width: calc(var(--font-size-1) + 1.5rem);
 }
 
+/* Desktop layout improvements for Services */
+@media screen and (min-width: 1024px) {
+
+
+    .servicesCards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        align-items: start;
+    }
+
+    .serviceCard {
+        width: 100%;
+        min-height: 12vh;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .serviceCardLeftSide {
+        display:flex;
+        
+        box-sizing: border-box;
+    }
+
+    .serviceCardRightSide {
+        width: 70%;
+        padding: .5rem;
+        gap: .5rem;
+    }
+}
+
 /* 
     Testimonials
  */
@@ -372,7 +450,6 @@
 .testimonialsTitle{
     color: white;
     font-size: clamp(1.2rem, 7vw, 3rem);
-    margin-top: 1rem;
     margin-bottom: 0;
 }
 
@@ -380,6 +457,7 @@
     background-color: var(--inner-color-1);
 
     padding: 2rem;
+    padding-top: 0;
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
@@ -397,7 +475,7 @@
     display: flex;
     transition: transform 450ms ease-in-out;
     gap: 1rem;
-    width: 100%;
+    
 }
 
 .testimonialCard {
@@ -501,26 +579,34 @@
 }
 .contactTitle { color: var(--text-color-1); font-size: var(--font-sectionTitle-size); margin: 0; }
 .contactList { 
+
+    display: flex; 
+    flex-direction: column; 
     list-style: none;
+
+    width: 100%;
 
     padding: 0; 
     margin: 0; 
-    display: flex; 
+    
     gap: 1.25rem; 
-    flex-direction: column; 
+    
 
 }
 .contactItem { 
     display: flex;
     flex-direction: row;
-    
+
+    align-items: center;
+
     color: var(--text-color-1); 
-    font-size: 1rem; 
+    font-size: clamp(1rem, 2vw, 1.25rem); 
     text-wrap: nowrap;
 }
 .contactLink { color: var(--text-color-1); 
+
     text-decoration: underline; 
-    align-self: center; 
+
 
     display: flex;
     
@@ -533,12 +619,14 @@
 }
 
 .contactImg {
-    width: clamp(20px, 4vw, 40px);
-    height: clamp(20px, 4vw, 40px);
+    width: clamp(20px, 2vw, 40px);
+    height: clamp(20px, 2vw, 40px);
     object-fit: contain;
     aspect-ratio: 1 / 1;
     display: inline-block;
 }
+
+
 
 /* 
     InfoModal styles
@@ -549,7 +637,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.75);
     z-index: 9999;
     padding: 1rem;
 }
@@ -557,12 +645,12 @@
 .info-modal-content {
     padding: 1.25rem;
     box-shadow: 0 10px 30px rgba(0,0,0,1);
-    border: 1px solid rgba(255,255,255,.1);
-    background: rgba(255,0,140,.8);
+    border: 1px solid rgba(255,255,255,.5);
+    background: rgba(20, 20, 20, 0.9);
 }
 
 .info-modal-title, .info-modal-body, .info-modal-close {
-    font-size: clamp(.5rem, 4vw, 1.5rem);
+    font-size: clamp(.5rem, 4vw, 1.4rem);
     color: white;
 }
 
@@ -577,6 +665,18 @@
     cursor: pointer;
 }
 
+@media screen and (min-width: 1024px) {
+  .contactList {
+    
+    justify-content: space-around;
+  }
+
+  .contactTitle {
+    align-self: flex-start;
+  }
+
+}
+
 /* Footer */
 .siteFooter {
     position: absolute;
@@ -587,12 +687,13 @@
     color: #ffffff;
     padding: 1.25rem 0;
     margin-top: 2rem;
+
+    align-items: center;
 }
 
 .footerInner {
-    max-width: 1200px;
     width: 100%;
-    padding: 0 1rem;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -600,8 +701,10 @@
 
 .footerText {
     margin: 0;
-    font-size: clamp(0.85rem, 2.5vw, 1rem);
+    font-size: clamp(0.85rem, 2.5vw, 1.1rem);
     color: #ffffff;
     text-align: center;
     opacity: 0.95;
+
+    width: 80%;
 }
